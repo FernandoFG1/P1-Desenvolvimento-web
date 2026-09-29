@@ -1,0 +1,10 @@
+<div class="input-group" style="max-width: 400px;">
+  <input 
+    #txtBusca
+    type="text" 
+    class="form-control" 
+    placeholder="Buscar..." 
+    (keyup.enter)="buscar(txtBusca.value)"
+  >
+  <button class="btn btn-light border" type="button" (click)="buscar(txtBusca.value)">ok</button>
+</div>

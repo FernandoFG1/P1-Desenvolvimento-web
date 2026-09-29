@@ -1,0 +1,58 @@
+<h3>Cadastro de Cliente</h3>
+
+<div class="row"> 
+  <div class="col">
+    <label class="form-label">NOME COMPLETO:</label>
+    <input type="text" id="txtNome" class="form-control">
+
+    <label class="form-label">E-MAIL:</label>
+    <input type="email" id="txtEmail" class="form-control">
+
+    <label class="form-label">CPF:</label>
+    <input type="text" id="txtCpf" class="form-control">
+
+    <label class="form-label">TELEFONE:</label>
+    <input type="tel" id="txtTelefone" class="form-control">
+
+    <label class="form-label">CEP:</label>
+    <input type="text" id="txtCep" class="form-control">
+  </div>
+
+  <div class="col">
+    <label class="form-label">ENDEREÇO:</label>
+    <input type="text" id="txtEndereco" class="form-control">
+
+    <label class="form-label">NUMERO</label>
+    <input type="text" id="txtnumero" class="form-control">
+
+    <label class="form-label">COMPLEMENTO:</label>
+    <input type="text" id="txtcomplemento" class="form-control">
+
+    <label class="form-label">SENHA:</label>
+    <input type="password" id="txtSenha" class="form-control"><br>
+
+    <button type="button" (click)="finalizarCadastro()" class="btn btn-outline-success w-100">FINALIZAR CADASTRO</button>
+    <br><br>
+    
+    JÁ POSSUI UMA CONTA?<br>
+    <a routerLink="/login" class="btn btn-outline-primary w-100">IR PARA O LOGIN</a>
+  </div>
+</div>
+
+<div *ngIf="cadastroSucesso" class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0, 0, 0, 0.6);">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-3">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" (click)="fecharEIrParaLogin()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-success mb-3" style="font-size: 3rem;">✓</div>
+        <h4 class="fw-bold text-success mb-2">Sucesso!</h4>
+        <p class="fs-5 text-secondary">Cadastro realizado com sucesso!</p>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-success w-100" (click)="fecharEIrParaLogin()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
